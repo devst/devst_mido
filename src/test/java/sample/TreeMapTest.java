@@ -32,12 +32,12 @@ public class TreeMapTest {
 	public void testSort() throws Exception {
 		TreeMap<String, Integer> tmap = new TreeMap<String, Integer>();
 
-		tmap.put("Ç¢", 2);
-		tmap.put("Ç†", 1);
-		tmap.put("Ç¶", 4);
-		tmap.put("Ç®", 5);
-		tmap.put("Ç§", 3);
-		
+		tmap.put("„ÅÑ", 2);
+		tmap.put("„ÅÇ", 1);
+		tmap.put("„Åà", 4);
+		tmap.put("„Åä", 5);
+		tmap.put("„ÅÜ", 3);
+
 		Iterator<Integer> valueIterator = tmap.values().iterator();
 		for (int i=0; valueIterator.hasNext(); i++) {
 			assertThat(i+1, is(valueIterator.next()));
