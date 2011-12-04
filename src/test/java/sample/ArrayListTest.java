@@ -6,34 +6,36 @@ import static org.junit.Assert.assertThat;
 
 import java.util.ArrayList;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class ArrayListTest {
 
+	private ArrayList<Object> sut;
+
+	@Before
+	public void setUp() {
+		sut = new ArrayList<Object>();
+	}
+
 	@Test
 	public void testInstance() {
-		ArrayList<Object> list = new ArrayList<Object>();
-
-		assertThat(list, is(notNullValue()));
-		assertThat(0, is(list.size()));
+		assertThat(sut, is(notNullValue()));
+		assertThat(0, is(sut.size()));
 	}
 
 	@Test
 	public void testAdd() throws Exception {
-		ArrayList<Object> list = new ArrayList<Object>();
+		sut.add(new Object());
 
-		list.add(new Object());
-
-		assertThat(1, is(list.size()));
+		assertThat(1, is(sut.size()));
 	}
 
 	@Test
 	public void testIndexRemove() throws Exception {
-		ArrayList<Object> list = new ArrayList<Object>();
-		list.add(new Object());
+		sut.add(new Object());
+		sut.remove(0);
 
-		list.remove(0);
-
-		assertThat(0, is(list.size()));
+		assertThat(0, is(sut.size()));
 	}
 }
