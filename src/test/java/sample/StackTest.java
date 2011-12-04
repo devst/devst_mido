@@ -14,6 +14,6 @@ public class StackTest {
 		Stack<Object> stack = new Stack<Object>();
 		
 		assertTrue(stack.empty());
-		
 	}
+	
 }
