@@ -12,7 +12,7 @@ public class HashMapTest {
 	
 	@Before
 	public void setUp() throws Exception {
-		hash_obj = new HashMap();
+		hash_obj = new HashMap<String, String>();
 	}
 
 	@Test
