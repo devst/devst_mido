@@ -29,6 +29,16 @@ public class TreeMapTest {
 	}
 
 	@Test
+	public void testAdd2() throws Exception {
+		TreeMap<String, Object> tmap = new TreeMap<String, Object>();
+
+		tmap.put(new String("1"), new Object());
+		tmap.put(new String("2"), new Object());
+
+		assertThat(2, is(tmap.size()));
+	}
+
+	@Test
 	public void testKeyRemove() throws Exception {
 		TreeMap<Object, Object> tmap = new TreeMap<Object, Object>();
 		Comparable<String> key = new String();
